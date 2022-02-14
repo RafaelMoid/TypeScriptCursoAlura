@@ -1,11 +1,12 @@
 export class Negociacao {
-
+    //Contructor \/ \/
     constructor(
         private _data: Date, 
         private _quantidade: number, 
         private _valor: number
         ) {}
 
+    //Getters \/ \/
     get data(): Date {
         return this._data;
     }
