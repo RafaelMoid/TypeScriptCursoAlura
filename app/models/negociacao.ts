@@ -1,25 +1,28 @@
 export class Negociacao {
     //Contructor \/ \/
     constructor(
-        private _data: Date, 
-        private _quantidade: number, 
-        private _valor: number
+        public readonly data: Date, 
+        public readonly quantidade: number, 
+        public readonly valor: number
         ) {}
 
-    //Getters \/ \/
-    get data(): Date {
-        return this._data;
-    }
+    //Getters
+    //This Getters are substituted by the readonly property
+    //of contructor properties
 
-    get quantidade(): number {
-        return this._quantidade;
-    }
+    // get data(): Date {
+    //     return this._data;
+    // }
 
-    get valor(): number {
-        return this._valor;
-    }
+    // get quantidade(): number {
+    //     return this._quantidade;
+    // }
+
+    // get valor(): number {
+    //     return this._valor;
+    // }
 
     get volume(): number {
-        return this._quantidade * this._valor;
+        return this.quantidade * this.valor;
     }
 }
